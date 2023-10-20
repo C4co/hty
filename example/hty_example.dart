@@ -11,19 +11,14 @@ var hty = Hty(
 
 void main() async {
   try {
-    var postResult = await hty.post(
+    await hty.post(
       path: '/posts',
       payload: {
-        'title': 'foo',
-        'body': 'bar',
+        'title': 'title',
+        'body': 'content',
         'userId': '1',
-        'id': '1',
       },
     );
-
-    print(postResult.data);
-
-    // print(result.data);
   } on HtyException catch (e) {
     print(e.message);
     print(e.statusCode);

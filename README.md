@@ -64,10 +64,10 @@ var reponse = await hty.get(
 
 | Parameter | Type                    | Description                          |
 | --------- | ----------------------- | ------------------------------------ |
-| `path`    | `String`                | path to resource                     |
-| `query`   | `Map<String, dynamic>?` | query params                         |
-| `headers` | `Map<String, dynamic>?` | specific headers for current request |
-| `cache`   | `bool`                  | memory cache, default is `true`      |
+| `path`    | `String`                | Path to resource                     |
+| `query`   | `Map<String, dynamic>?` | Query params                         |
+| `headers` | `Map<String, dynamic>?` | Specific headers for current request |
+| `cache`   | `bool`                  | Memory cache, default is `true`      |
 
 ## hty.post()
 
@@ -83,33 +83,33 @@ var reponse = await hty.post(
 
 | Parameter  | Type                    | Description                          |
 | ---------- | ----------------------- | ------------------------------------ |
-| `path`     | `String`                | path to resource                     |
-| `headers`  | `Map<String, dynamic>?` | specific headers for current request |
-| `payload`  | `Map<String, string>?`  | request body                         |
-| `encoding` | `Enconding`             | default is `utf-8`                   |
+| `path`     | `String`                | Path to resource                     |
+| `headers`  | `Map<String, dynamic>?` | Specific headers for current request |
+| `payload`  | `Map<String, string>?`  | Request body                         |
+| `encoding` | `Enconding`             | Default is `utf-8`                   |
 
 ## HtyGetResponse
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
-| `statusCode`      | `int`                  | http status code               |
-| `responseHeaders` | `Map<String, string>?` | response headers               |
-| `requestHeaders`  | `Map<String, string>?` | request headers                |
-| `data`            | `dynamic`              | request data                   |
-| `response`        | `http.Response`        | full response from http object |
-| `message`         | `String`               | http message                   |
+| `statusCode`      | `int`                  | HTTP status code               |
+| `responseHeaders` | `Map<String, string>?` | Response headers               |
+| `requestHeaders`  | `Map<String, string>?` | Request headers                |
+| `data`            | `dynamic`              | Request data                   |
+| `response`        | `http.Response`        | Full response from HTTP object |
+| `message`         | `String`               | HTTP message                   |
 
 ## HtyPostResponse
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
-| `statusCode`      | `int`                  | http status code               |
-| `responseHeaders` | `Map<String, string>?` | response headers               |
-| `requestHeaders`  | `Map<String, string>?` | request headers                |
-| `data`            | `dynamic`              | request data                   |
-| `response`        | `http.Response`        | full response from http object |
-| `message`         | `String`               | http message                   |
-| `payload`         | `Map<String, string>?` | request body                   |
+| `statusCode`      | `int`                  | HTTP status code               |
+| `responseHeaders` | `Map<String, string>?` | Response headers               |
+| `requestHeaders`  | `Map<String, string>?` | Request headers                |
+| `data`            | `dynamic`              | Request data                   |
+| `response`        | `http.Response`        | Full response from HTTP object |
+| `message`         | `String`               | HTTP message                   |
+| `payload`         | `Map<String, string>?` | Request body                   |
 
 ## HtyException
 
@@ -133,8 +133,8 @@ try {
 | Parameter     | Type                              | Description           |
 | ------------- | --------------------------------- | --------------------- |
 | `statusCode`  | `int`                             | HTTP status code      |
-| `message`     | `String`                          | error message         |
-| `description` | `Map<String, String>` or `String` | api error description |
+| `message`     | `String`                          | Error message         |
+| `description` | `Map<String, String>` or `String` | Api error description |
 
 ---
 

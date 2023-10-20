@@ -3,9 +3,9 @@ part of '../hty_base.dart';
 extension Put on Hty {
   Future<HtyPostResponse> put({
     required String path,
-    Map<String, dynamic>? query,
     Map<String, String>? headers,
     Map<String, String>? payload,
+    Encoding? encoding,
   }) async {
     try {
       var mergedHeaders = {...?defaultHeaders, ...?headers};
@@ -16,10 +16,10 @@ extension Put on Hty {
         response = await client.put(
           endpoint(
             path: path,
-            query: query,
           ),
           headers: mergedHeaders,
           body: payload,
+          encoding: encoding,
         );
       } on ClientException {
         throw HtyException(

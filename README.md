@@ -36,7 +36,7 @@ void main(){
 }
 ```
 
-### Hty()
+### 🟢 Hty()
 
 Client container for HTTP requests.
 
@@ -56,7 +56,7 @@ var hty = Hty(
 | `client`         | `http.Client`         | HTTP Client                                |
 | `defaultHeaders` | `Map<String, String>` | Headers that will be used on every request |
 
-### hty.get()
+### 🟢 hty.get()
 
 ```dart
 var reponse = await hty.get(
@@ -71,7 +71,7 @@ var reponse = await hty.get(
 | `headers` | `Map<String, dynamic>?` | Specific headers for current request |
 | `cache`   | `bool`                  | Memory cache, default is `true`      |
 
-### hty.post()
+### 🟢 hty.post()
 
 ```dart
 var reponse = await hty.post(
@@ -90,7 +90,7 @@ var reponse = await hty.post(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-### HtyGetResponse
+### 🟢 HtyGetResponse
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
@@ -101,7 +101,7 @@ var reponse = await hty.post(
 | `response`        | `http.Response`        | Full response from HTTP object |
 | `message`         | `String`               | HTTP message                   |
 
-### HtyPostResponse
+### 🟢 HtyPostResponse
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
@@ -113,7 +113,7 @@ var reponse = await hty.post(
 | `message`         | `String`               | HTTP message                   |
 | `payload`         | `Map<String, string>?` | Request body                   |
 
-### HtyException
+### 🟢 HtyException
 
 ```dart
 try {

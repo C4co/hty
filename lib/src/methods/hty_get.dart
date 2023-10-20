@@ -1,6 +1,15 @@
 part of '../hty_base.dart';
 
 extension Get on Hty {
+  /// Sends a GET request to the specified endpoint
+  ///
+  /// [path] The path to the endpoint
+  ///
+  /// [headers] The headers to send with the request
+  ///
+  /// [query] The query to send with the request
+  ///
+  /// [cache] Whether to cache the response or not
   Future<HtyGetResponse> get({
     required String path,
     Map<String, dynamic>? query,

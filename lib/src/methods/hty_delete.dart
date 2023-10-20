@@ -1,6 +1,15 @@
 part of '../hty_base.dart';
 
 extension Delete on Hty {
+  /// Sends a DELETE request to the specified endpoint
+  ///
+  /// [path] The path to the endpoint
+  ///
+  /// [headers] The headers to send with the request
+  ///
+  /// [payload] The payload to send with the request
+  ///
+  /// [encoding] The encoding to use for the request
   Future<HtyPostResponse> delete({
     required String path,
     Map<String, String>? headers,

@@ -2,6 +2,8 @@
 
 >Tiny HTTP wrapper
 
+[![Hty](https://github.com/C4co/hty/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/hty/actions/workflows/dart.yml)
+
 ## Install
 
 ```yaml

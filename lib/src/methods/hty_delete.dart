@@ -48,8 +48,7 @@ extension Delete on Hty {
         // Do nothing
       }
 
-      if (!successRange.contains(response.statusCode) &&
-          !redirectRange.contains(response.statusCode)) {
+      if (!successRange.contains(response.statusCode) && !redirectRange.contains(response.statusCode)) {
         throw HtyException(
           message: httpErrorMessage(response),
           statusCode: response.statusCode,

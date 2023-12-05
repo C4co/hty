@@ -97,7 +97,7 @@ var reponse = await hty.post(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-### 🟢 hty.put()
+## 🟢 hty.put()
 
 `hty.put` is a method that sends a PUT request to the specified path.
 
@@ -118,7 +118,7 @@ var reponse = await hty.put(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-### 🟢 hty.delete()
+## 🟢 hty.delete()
 
 `hty.delete` is a method that sends a DELETE request to the specified path.
 

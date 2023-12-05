@@ -1,6 +1,6 @@
 # Hty
 
->Tiny HTTP wrapper
+>The hty library is a Dart package designed to simplify HTTP requests. It provides a set of classes and methods for sending HTTP requests and handling responses.
 
 [![Hty](https://github.com/C4co/hty/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/hty/actions/workflows/dart.yml)
 
@@ -36,9 +36,9 @@ void main(){
 }
 ```
 
-### 🟢 Hty()
+## 🟣 Hty()
 
-Client container for HTTP requests.
+`hty` is a class that provides a set of methods for sending HTTP requests and handling responses.
 
 ```dart
 var hty = Hty(
@@ -56,7 +56,9 @@ var hty = Hty(
 | `client`         | `http.Client`         | HTTP Client                                |
 | `defaultHeaders` | `Map<String, String>` | Headers that will be used on every request |
 
-### 🟢 hty.get()
+## 🟢 hty.get()
+
+`hty.get` is a method that sends a GET request to the specified path.
 
 ```dart
 var reponse = await hty.get(
@@ -71,7 +73,12 @@ var reponse = await hty.get(
 | `headers` | `Map<String, dynamic>?` | Specific headers for current request |
 | `cache`   | `bool`                  | Memory cache, default is `true`      |
 
-### 🟢 hty.post()
+> [!NOTE]
+> Memory cache: If the same request is made twice, the second request will be returned from memory.
+
+## 🟢 hty.post()
+
+`hty.post` is a method that sends a POST request to the specified path.
 
 ```dart
 var reponse = await hty.post(
@@ -90,7 +97,40 @@ var reponse = await hty.post(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-### 🟢 HtyGetResponse
+### 🟢 hty.put()
+
+`hty.put` is a method that sends a PUT request to the specified path.
+
+```dart
+var reponse = await hty.put(
+  path: "/todos/1",
+  payload: {
+    'title': 'todo title',
+    'content': 'todo content',
+  },
+);
+```
+
+| Parameter  | Type                    | Description                          |
+| ---------- | ----------------------- | ------------------------------------ |
+| `path`     | `String`                | Path to resource                     |
+| `headers`  | `Map<String, dynamic>?` | Specific headers for current request |
+| `payload`  | `Map<String, string>?`  | Request body                         |
+| `encoding` | `Enconding`             | Default is `utf-8`                   |
+
+### 🟢 hty.delete()
+
+`hty.delete` is a method that sends a DELETE request to the specified path.
+
+```dart
+var reponse = await hty.delete(
+  path: "/todos/1",
+);
+```
+
+## 🔵 HtyGetResponse
+
+`htyGetResponse` is a class that contains the response from a GET request.
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
@@ -101,7 +141,9 @@ var reponse = await hty.post(
 | `response`        | `http.Response`        | Full response from HTTP object |
 | `message`         | `String`               | HTTP message                   |
 
-### 🟢 HtyPostResponse
+## 🔵 HtyPostResponse
+
+`htyPostResponse` is a class that contains the response from a POST request.
 
 | Parameter         | Type                   | Description                    |
 | ----------------- | ---------------------- | ------------------------------ |
@@ -113,7 +155,9 @@ var reponse = await hty.post(
 | `message`         | `String`               | HTTP message                   |
 | `payload`         | `Map<String, string>?` | Request body                   |
 
-### 🟢 HtyException
+## 🔵 HtyException
+
+`htyException` is a class that contains information about an error that occurred during a request.
 
 ```dart
 try {

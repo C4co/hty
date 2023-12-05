@@ -1,6 +1,6 @@
 # Hty
 
->The hty library is a Dart package designed to simplify HTTP requests. It provides a set of classes and methods for sending HTTP requests and handling responses.
+>Tiny http wrapper
 
 [![Hty](https://github.com/C4co/hty/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/hty/actions/workflows/dart.yml)
 

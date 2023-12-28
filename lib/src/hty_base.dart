@@ -21,13 +21,25 @@ class Hty {
     required this.baseurl,
     required this.client,
     this.defaultHeaders,
-  });
+  }) {
+    if (!Uri.parse(baseurl).isAbsolute) {
+      throw Exception("'$baseurl' is not a valid url");
+    }
+  }
 
   endpoint({
     required String path,
     Map<String, dynamic>? query,
   }) {
-    return Uri.parse('$baseurl$path').replace(queryParameters: query);
+    late String url;
+
+    if (baseurl.endsWith('/')) {
+      url = baseurl.substring(0, baseurl.length - 1);
+    } else {
+      url = baseurl;
+    }
+
+    return Uri.parse('$url$path').replace(queryParameters: query);
   }
 
   close() {

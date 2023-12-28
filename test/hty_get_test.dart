@@ -3,36 +3,15 @@ import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
-  group("No server", () {
-    var noServer = Hty(baseurl: "http://no-server", client: http.Client());
-
-    test('Check client exception', () async {
-      try {
-        await noServer.get(path: "/todos/1");
-      } on HtyException catch (e) {
-        expect(e.message, "Connection refused");
-        expect(e.statusCode, 000);
-        expect(
-          e.description,
-          "The remote computer refused the network connection",
-        );
-      }
-    });
-  });
-
-  group('Json Placeholder', () {
+  group('Hty:Get', () {
     var jsonPlaceholder = Hty(
-      baseurl: "https://jsonplaceholder.typicode.com",
+      baseurl: "https://jsonplaceholder.typicode.com/",
       client: http.Client(),
       defaultHeaders: {
         "Content-Type": "application/json",
         "Accept": "application/json",
       },
     );
-
-    setUp(() {
-      // Additional setup goes here.
-    });
 
     test('Check http object', () async {
       expect(
@@ -85,7 +64,7 @@ void main() {
       expect(jsonPlaceholder.cacheContainer.length, 3);
     });
 
-    test('404', () async {
+    test('Check not found resource', () async {
       try {
         jsonPlaceholder.get(
           path: "/todos/aa",

@@ -27,6 +27,14 @@ jobs:
       - name: Install dependencies
         run: dart pub get
 
+      # install dart flog global
+      - name: Install dart flog
+        run: dart pub global activate dart_frog_cli
+
+      # start server in server folder
+      - name: Start server
+        run: cd server && dart_frog dev
+
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting
       #   run: dart format --output=none --set-exit-if-changed .
@@ -40,3 +48,5 @@ jobs:
       # want to change this to 'flutter test'.
       - name: Run tests
         run: dart test
+
+

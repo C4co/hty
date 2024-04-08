@@ -37,7 +37,7 @@ jobs:
 
       # start server in server folder
       - name: Start server
-        run: cd server && dart_frog dev &&
+        run: cd server && dart_frog dev &
 
       # Uncomment this step to verify the use of 'dart format' on each commit.
       # - name: Verify formatting

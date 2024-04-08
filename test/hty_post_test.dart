@@ -1,37 +1,38 @@
 import 'package:hty/hty.dart';
 import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
+import '../server/entities/product.dart';
 
 void main() {
-  group("Check post method", () {
-    var jsonPlaceholder = Hty(
-      baseurl: "https://jsonplaceholder.typicode.com",
+  group("check post method", () {
+    var customServer = Hty(
+      baseurl: "http://localhost:8080",
       client: http.Client(),
       defaultHeaders: {
         "Accept": "application/json",
+        "Content-Type": "application/json",
       },
     );
 
     test('full payload', () async {
-      var result = await jsonPlaceholder.post(
-        path: "/posts",
-        payload: {
-          "title": "foo",
-          "body": "bar",
-          "userId": "1",
-        },
+      var result = await customServer.post(
+        path: "/products",
+        payload: Product(
+          name: "foo",
+          description: "bar",
+          price: 100.0,
+        ).toJson(),
       );
 
       expect(result.statusCode, 201);
-      expect(result.message, "Created");
-      expect(result.data["title"], "foo");
-      expect(result.data["body"], "bar");
-      expect(result.data["userId"], "1");
+      expect(result.data["name"], "foo");
+      expect(result.data["description"], "bar");
+      expect(result.data["price"], "100.0");
     });
 
     test('without payload', () async {
-      var result = await jsonPlaceholder.post(
-        path: "/posts",
+      var result = await customServer.post(
+        path: "/products",
       );
 
       expect(result.statusCode, 201);

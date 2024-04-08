@@ -27,7 +27,7 @@ extension Delete on Hty {
             path: path,
           ),
           headers: mergedHeaders,
-          body: payload,
+          body: jsonEncode(payload),
           encoding: encoding,
         );
       } on ClientException {

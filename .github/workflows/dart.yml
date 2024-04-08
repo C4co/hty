@@ -31,6 +31,10 @@ jobs:
       - name: Install dart flog
         run: dart pub global activate dart_frog_cli
 
+      # install dependencies in server folder
+      - name: Install dependencies in server
+        run: cd server && dart pub get
+
       # start server in server folder
       - name: Start server
         run: cd server && dart_frog dev

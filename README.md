@@ -37,7 +37,7 @@ void main(){
 }
 ```
 
-## 🟣 Hty()
+## Hty()
 
 `hty` is a class that provides a set of methods for sending HTTP requests and handling responses.
 
@@ -57,7 +57,7 @@ var hty = Hty(
 | `client`         | `http.Client`         | HTTP Client                                |
 | `defaultHeaders` | `Map<String, String>` | Headers that will be used on every request |
 
-## 🟢 hty.get()
+## hty.get()
 
 `hty.get` is a method that sends a GET request to the specified path.
 
@@ -77,7 +77,7 @@ var reponse = await hty.get(
 > [!NOTE]
 > Memory cache: If the same request is made twice, the second request will be returned from memory.
 
-## 🟢 hty.post()
+## hty.post()
 
 `hty.post` is a method that sends a POST request to the specified path.
 
@@ -98,7 +98,7 @@ var reponse = await hty.post(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-## 🟢 hty.put()
+## hty.put()
 
 `hty.put` is a method that sends a PUT request to the specified path.
 
@@ -119,7 +119,7 @@ var reponse = await hty.put(
 | `payload`  | `Map<String, string>?`  | Request body                         |
 | `encoding` | `Enconding`             | Default is `utf-8`                   |
 
-## 🟢 hty.delete()
+## hty.delete()
 
 `hty.delete` is a method that sends a DELETE request to the specified path.
 
@@ -129,7 +129,7 @@ var reponse = await hty.delete(
 );
 ```
 
-## 🔵 HtyGetResponse
+## HtyGetResponse
 
 `htyGetResponse` is a class that contains the response from a GET request.
 
@@ -142,7 +142,7 @@ var reponse = await hty.delete(
 | `response`        | `http.Response`        | Full response from HTTP object |
 | `message`         | `String`               | HTTP message                   |
 
-## 🔵 HtyPostResponse
+## HtyPostResponse
 
 `htyPostResponse` is a class that contains the response from a POST request.
 
@@ -156,7 +156,7 @@ var reponse = await hty.delete(
 | `message`         | `String`               | HTTP message                   |
 | `payload`         | `Map<String, string>?` | Request body                   |
 
-## 🔵 HtyException
+## HtyException
 
 `htyException` is a class that contains information about an error that occurred during a request.
 

@@ -183,6 +183,19 @@ try {
 | `message`     | `String`                          | Error message         |
 | `description` | `Map<String, String>` or `String` | Api error description |
 
+
+## Development
+
+**Start the test server:**
+The web server run with dart frog: https://dartfrog.vgv.dev/
+```bash
+  dart_frog serve
+```
+
+**Run tests:**
+```bash
+  dart test
+```
 ---
 
 Carlos Costa @ 2023

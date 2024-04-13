@@ -183,12 +183,12 @@ try {
 | `message`     | `String`                          | Error message         |
 | `description` | `Map<String, String>` or `String` | Api error description |
 
-
 ## Development
 
-**Start the test server:**
-The web server run with dart frog: https://dartfrog.vgv.dev/
+**Start server:**
+the web server run with dart frog: https://dartfrog.vgv.dev/
 ```bash
+  cd server
   dart_frog serve
 ```
 

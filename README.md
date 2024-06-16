@@ -3,7 +3,7 @@
 >Tiny http wrapper
 
 [![Hty](https://github.com/carllosnc/hty/actions/workflows/dart.yml/badge.svg)](https://github.com/carllosnc/hty/actions/workflows/dart.yml)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/65d364a6801a4d4f9102d3cb9920a970)](https://app.codacy.com/gh/C4co/hty/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/634f7a5dec9e44d19e2850e872ab24eb)](https://app.codacy.com/gh/carllosnc/hty/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ## Install
 
